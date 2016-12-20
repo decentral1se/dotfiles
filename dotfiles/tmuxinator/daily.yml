@@ -6,7 +6,7 @@ root: ~/
 startup_window: hack
 
 windows:
-  - todo:    vim ~/TODO.md
+  - todo:    nvim ~/TODO.md
   - irssi:   irssi
   - feeds:   newsbeuter
   - twitter: cd $HOME && . .venv/bin/activate && rainbowstream
