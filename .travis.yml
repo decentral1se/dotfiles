@@ -1,1 +1,19 @@
-# TODO
+sudo: required
+
+language: generic
+
+services:
+  - docker
+
+before_install:
+  - docker build -t dotfiles .
+  - docker ps -a
+
+script:
+  - echo "Hello, World!"
+
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+    docker push decentral1se/dotfiles;
+    fi
