@@ -1,19 +1,16 @@
 sudo: required
 
-language: generic
-
-services:
-  - docker
+language: python
 
 before_install:
-  - docker build -t dotfiles .
-  - docker ps -a
+  - sudo apt-get update
+  - curl -L http://bootstrap.saltstack.org | sudo sh -s -- git develop
+
+install:
+  - sudo mkdir -p /srv/salt/states
+  - sudo cp -r states/* /srv/salt/states
+  - sudo cp .travis/minion /etc/salt/minion
+  - sudo service salt-minion restart
 
 script:
-  - echo "Hello, World!"
-
-after_success:
-  - if [ "$TRAVIS_BRANCH" == "master" ]; then
-    docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-    docker push decentral1se/dotfiles;
-    fi
+  - sudo salt-call state.show_highstate --local --retcode-passthrough
