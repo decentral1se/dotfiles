@@ -1,0 +1,13 @@
+docker-py==1.10.6
+docker-pycreds==0.2.1
+Jinja2==2.9.6
+MarkupSafe==1.0
+msgpack-python==0.4.8
+pycrypto==2.6.1
+PyYAML==3.12
+pyzmq==16.0.2
+requests==2.13.0
+salt==2016.11.3
+six==1.10.0
+tornado==4.4.3
+websocket-client==0.40.0
