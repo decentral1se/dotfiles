@@ -191,6 +191,7 @@ alias ytx='youtube-dl -x'
 
 # docker
 alias drn='docker run -it'
+alias dps='docker ps'
 
 # pdf
 alias pdf='evince'
