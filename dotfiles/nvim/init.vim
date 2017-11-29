@@ -167,7 +167,6 @@ augroup END
 augroup writing
   autocmd!
   autocmd! FileType markdown,mkd call litecorrect#init()
-                            \ |  call pencil#init()
 augroup END
 
 augroup ditto
