@@ -45,6 +45,11 @@ Host pula-zambia-lin
   User lukem
   Port 48001
 
+Host mail-aptivate
+  Hostname lin-mail.aptivate.org
+  User lukem
+  Port 48001
+
 Host monitor-lin
   Hostname lin-monitor.aptivate.org
   User lukem
