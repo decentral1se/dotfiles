@@ -39,4 +39,6 @@ RUN pip3 install \
   pipenv \
   proselint
 
-WORKDIR /var/dotfiles
+RUN mkdir /home/root
+
+WORKDIR /home/root/dotfiles
