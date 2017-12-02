@@ -1,21 +1,16 @@
 ---
-- name: Install Git
-  become: True
-  apt:
-    name: git
-
-- name: Clone the dotfiles repository
+- name: "Clone the dotfiles repository"
   git:
     repo: "https://github.com/lwm/dotfiles.git"
-    dest: "{{ dotfiles }}"
+    dest: "{{ home }}/dotfiles"
     update: False
 
-- name: Delete the existing HTTPS remote URL
+- name: "Delete the existing HTTPS remote URL"
   command: "git remote rm origin"
   args:
-    chdir: "{{ dotfiles }}"
+    chdir: "{{ home }}/dotfiles"
 
-- name: Set a new SSH style remote URL
+- name: "Set a new SSH style remote URL"
   command: "git remote add origin git@github.com:lwm/dotfiles.git"
   args:
-    chdir: "{{ dotfiles }}"
+    chdir: "{{ home }}/dotfiles"

@@ -3,12 +3,12 @@
   pip:
     name: "vim-vint"
     extra_args: "--user"
-    executable: pip3
+    executable: "pip3"
 
-- name: Symlink the vint configuration
+- name: "Symlink the vint configuration"
   file:
-    src: "{{ dotfiles }}/dotfiles/vint/vintrc.yaml"
+    src: "vintrc.yaml"
     dest: "{{ home }}/.vintrc.yaml"
-    state: link
+    state: "link"
     force: True
     owner: "{{ ansible_user }}"

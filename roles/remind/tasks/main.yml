@@ -1,5 +1,5 @@
 ---
-- name: Install remind
+- name: "Install remind"
   become: True
   apt:
-    name: remind
+    name: "remind"

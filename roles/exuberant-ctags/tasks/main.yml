@@ -1,0 +1,13 @@
+---
+- name: "Install ctags"
+  become: True
+  apt:
+    name: "exuberant-ctags"
+
+- name: "Symlink exuberant-ctags configuration"
+  file:
+    src: "ctags"
+    dest: "{{ home }}/.ctags"
+    state: "link"
+    force: True
+    owner: "{{ ansible_user }}"

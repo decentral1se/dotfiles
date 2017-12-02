@@ -1,16 +1,21 @@
 ---
-- name: Symlink the Git configuration
+- name: "Install Git"
+  become: True
+  apt:
+    name: "git"
+
+- name: "Symlink the Git configuration"
   file:
-    src: "{{ dotfiles }}/dotfiles/git/gitconfig"
+    src: "gitconfig"
     dest: "{{ home }}/.gitconfig"
-    state: link
+    state: "link"
     force: True
     owner: "{{ ansible_user }}"
 
-- name: Symlink the Git ignore configuration
+- name: "Symlink the Git ignore configuration"
   file:
-    src: "{{ dotfiles }}/dotfiles/git/gitignore_global"
+    src: "gitignore_global"
     dest: "{{ home }}/.gitignore_global"
-    state: link
+    state: "link"
     force: True
     owner: "{{ ansible_user }}"

@@ -1,4 +1,4 @@
 ---
-- name: Install the silversearcher-ag package
+- name: "Install the silversearcher-ag package"
   apt:
-    name: silversearcher-ag
+    name: "silversearcher-ag"

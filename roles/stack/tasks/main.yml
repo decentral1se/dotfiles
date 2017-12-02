@@ -1,5 +1,5 @@
 ---
-- name: Install stack
+- name: "Install stack"
   become: True
   apt:
     name: "{{ item }}"
@@ -16,7 +16,7 @@
     - "xz-utils"
     - "zlib1g-dev"
 
-- name: Install a global GHC
+- name: "Install a global GHC"
   command: "stack setup --install-ghc"
   args:
     chdir: "{{ home }}"

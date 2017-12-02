@@ -1,11 +1,11 @@
 ---
-- name: Clone the fzf repository
+- name: "Clone the fzf repository"
   git:
     repo: "https://github.com/junegunn/fzf.git"
     dest: "{{ home }}/.fzf"
     update: False
 
-- name: Run the fzf install script
+- name: "Run the fzf install script"
   command: "./install --all --no-bash --no-fish"
   args:
     chdir: "{{ home }}/.fzf"

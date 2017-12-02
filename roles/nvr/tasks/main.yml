@@ -3,4 +3,4 @@
   pip:
     name: "neovim-remote"
     extra_args: "--user"
-    executable: pip3
+    executable: "pip3"

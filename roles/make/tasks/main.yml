@@ -1,5 +1,5 @@
 ---
-- name: Install make
+- name: "Install make"
   become: True
   apt:
-    name: make
+    name: "make"

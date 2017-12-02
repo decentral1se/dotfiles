@@ -1,10 +1,10 @@
 ---
 - hosts: localhost
   roles:
+    - { role: git }
     - { role: curl }
     - { role: dotfiles }
-    - { role: git }
-    - { role: ctags }
+    - { role: exuberant-ctags }
     - { role: zsh }
     - { role: ohmyzsh }
     - { role: autosuggestions }

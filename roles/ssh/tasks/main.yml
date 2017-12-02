@@ -1,15 +1,15 @@
 ---
-- name: Make sure the SSH configuration folder is created
+- name: "Make sure the SSH configuration folder is created"
   file:
     path: "{{ home }}/.ssh"
     state: directory
     mode: 0755
     owner: "{{ ansible_user }}"
 
-- name: Symlink the SSH configuration
+- name: "Symlink the SSH configuration"
   file:
-    src: "{{ dotfiles }}/dotfiles/ssh/config"
+    src: "config"
     dest: "{{ home }}/.ssh/config"
-    state: link
+    state: "link"
     force: True
     owner: "{{ ansible_user }}"

@@ -12,7 +12,7 @@
 
 - name: Symlink the nvm configuration
   file:
-    src: "{{ dotfiles }}/dotfiles/nvm/nvmrc"
+    src: "nvmrc"
     dest: "{{ home }}/.nvmrc"
     state: link
     force: True

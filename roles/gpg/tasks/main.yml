@@ -1,5 +1,5 @@
 ---
-- name: Install gpg
+- name: "Install gpg"
   become: True
   apt:
-    name: gnupg
+    name: "gnupg"

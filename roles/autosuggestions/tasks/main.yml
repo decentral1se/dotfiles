@@ -1,5 +1,5 @@
 ---
-- name: Clone the auto suggestions repository
+- name: "Clone the auto suggestions repository"
   git:
     repo: "git://github.com/zsh-users/zsh-autosuggestions"
     dest: "{{ home }}/.zsh/zsh-autosuggestions"

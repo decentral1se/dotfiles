@@ -1,20 +1,20 @@
 ---
-- name: Install gtimelog
+- name: "Install gtimelog"
   become: True
   apt:
-    name: gtimelog
+    name: "gtimelog"
 
-- name: Make sure the gtimelog configuration folder is created
+- name: "Make sure the gtimelog configuration folder is created"
   file:
     path: "{{ home }}/.gtimelog"
-    state: directory
-    mode: 0755
+    state: "directory"
+    mode: "0755"
     owner: "{{ ansible_user }}"
 
-- name: Symlink the gtimelog configuration
+- name: "Symlink the gtimelog configuration"
   file:
-    src: "{{ dotfiles }}/dotfiles/gtimelog/gtimelogrc"
+    src: "gtimelogrc"
     dest: "{{ home }}/.gtimelog/gtimelogrc"
-    state: link
+    state: "link"
     force: True
     owner: "{{ ansible_user }}"

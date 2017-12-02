@@ -1,14 +1,14 @@
 ---
-- name: Symlink the proselint configuration
+- name: "Symlink the proselint configuration"
   file:
-    src: "{{ dotfiles}}/dotfiles/proselint/proselintrc"
+    src: "proselintrc"
     dest: "{{ home }}/.proselintrc"
-    state: link
+    state: "link"
     force: True
     owner: "{{ ansible_user }}"
 
-- name: Install proselint
+- name: "Install proselint"
   pip:
-    name: proselint
+    name: "proselint"
     extra_args: "--user"
-    executable: pip3
+    executable: "pip3"

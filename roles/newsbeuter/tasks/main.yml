@@ -1,28 +1,28 @@
 ---
-- name: Install newsbeuter
+- name: "Install newsbeuter"
   become: True
   apt:
-    name: newsbeuter
+    name: "newsbeuter"
 
-- name: Make sure the newsbeuter configuration folder is created
+- name: "Make sure the newsbeuter configuration folder is created"
   file:
     path: "{{ home }}/.newsbeuter"
-    state: directory
-    mode: 0755
+    state: "directory"
+    mode: "0755"
     owner: "{{ ansible_user }}"
 
-- name: Symlink the newsbeuter configuration
+- name: "Symlink the newsbeuter configuration"
   file:
-    src: "{{ dotfiles }}/dotfiles/newsbeuter/config"
+    src: "config"
     dest: "{{ home }}/.newsbeuter/config"
-    state: link
+    state: "link"
     force: True
     owner: "{{ ansible_user }}"
 
-- name: Symlink the newsbeuter URLs
+- name: "Symlink the newsbeuter URLs"
   file:
-    src: "{{ dotfiles }}/dotfiles/newsbeuter/urls"
+    src: "urls"
     dest: "{{ home }}/.newsbeuter/urls"
-    state: link
+    state: "link"
     force: True
     owner: "{{ ansible_user }}"

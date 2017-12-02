@@ -1,13 +1,13 @@
 ---
-- name: Install msmtp
+- name: "Install msmtp"
   become: True
   apt:
-    name: msmtp
+    name: "msmtp"
 
-- name: Symlink the msmtp configuration
+- name: "Symlink the msmtp configuration"
   file:
-    src: "{{ dotfiles }}/dotfiles/msmtp/msmtprc"
+    src: "msmtprc"
     dest: "{{ home }}/.msmtprc"
-    state: link
+    state: "link"
     force: True
     owner: "{{ ansible_user }}"

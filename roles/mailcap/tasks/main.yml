@@ -1,8 +1,8 @@
 ---
-- name: Symlink the mailcap configuration
+- name: "Symlink the mailcap configuration"
   file:
-    src: "{{ dotfiles }}/dotfiles/mailcap/mailcap"
+    src: "mailcap"
     dest: "{{ home }}/.mailcap"
-    state: link
+    state: "link"
     force: True
     owner: "{{ ansible_user }}"

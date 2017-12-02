@@ -1,5 +1,5 @@
 ---
-- name: Install pass
+- name: "Install pass"
   become: True
   apt:
-    name: pass
+    name: "pass"
