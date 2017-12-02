@@ -13,10 +13,9 @@ test:
 	@docker run \
 	-v $$(pwd):$(WORKDIR) \
 	-ti $(IMAGE) \
-	ansible-playbook bootstrap.yml \
-	--inventory "localhost"
+	ansible-playbook bootstrap.yml
 .PHONY: test
 
 bootstrap:
-	@ansible-playbook --inventory localhost bootstrap.yml
+	@ansible-playbook bootstrap.yml
 .PHONY: bootstrap
