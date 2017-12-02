@@ -1,13 +1,13 @@
 ---
-- name: Install tmux
+- name: "Install tmux"
   become: True
   apt:
-    name: tmux
+    name: "tmux"
 
-- name: Symlink the tmux configuration
+- name: "Symlink the tmux configuration"
   file:
-    src: "{{ dotfiles }}/dotfiles/tmux/tmux.conf"
+    src: "tmux.conf"
     dest: "{{ home }}/.tmux.conf"
-    state: link
+    state: "link"
     force: True
     owner: "{{ ansible_user }}"

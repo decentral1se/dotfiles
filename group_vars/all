@@ -1,3 +1,2 @@
 ---
 home: "/home/{{ ansible_user }}"
-dotfiles: "{{ home }}/dotfiles"

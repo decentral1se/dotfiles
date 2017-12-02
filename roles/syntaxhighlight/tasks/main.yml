@@ -1,5 +1,5 @@
 ---
-- name: Clone the syntax highlight repository
+- name: "Clone the syntax highlight repository"
   git:
     repo: "https://github.com/zsh-users/zsh-syntax-highlighting.git"
     dest: "{{ home }}/.zsh/zsh-syntax-highlighting"

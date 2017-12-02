@@ -1,5 +1,5 @@
 ---
-- name: Clone the autoenv repository
+- name: "Clone the autoenv repository"
   git:
     repo: "git://github.com/kennethreitz/autoenv.git"
     dest: "{{ home }}/.autoenv"

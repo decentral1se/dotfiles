@@ -1,30 +1,30 @@
 ---
-- name: Clone the ohmyzsh repository
+- name: "Clone the ohmyzsh repository"
   git:
     repo: "https://github.com/robbyrussell/oh-my-zsh.git"
     dest: "{{ home }}/.oh-my-zsh"
     update: False
 
-- name: Symlink the zsh configuration file
+- name: "Symlink the zsh configuration file"
   file:
-    src: "{{ dotfiles }}/dotfiles/zsh/zshrc"
+    src: "zshrc"
     dest: "{{ home }}/.zshrc"
-    state: link
+    state: "link"
     force: True
     owner: "{{ ansible_user }}"
 
-- name: Symlink the zsh aliases
+- name: "Symlink the zsh aliases"
   file:
-    src: "{{ dotfiles }}/dotfiles/zsh/zsha"
+    src: "zsha"
     dest: "{{ home }}/.zsha"
-    state: link
+    state: "link"
     force: True
     owner: "{{ ansible_user }}"
 
-- name: Symlink the zsh functions
+- name: "Symlink the zsh functions"
   file:
-    src: "{{ dotfiles }}/dotfiles/zsh/zshf"
+    src: "zshf"
     dest: "{{ home }}/.zshf"
-    state: link
+    state: "link"
     force: True
     owner: "{{ ansible_user }}"

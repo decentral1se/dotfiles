@@ -1,6 +1,6 @@
 ---
-- name: Install pipenv
+- name: "Install pipenv"
   pip:
-    name: pipenv
+    name: "pipenv"
     extra_args: "--user"
-    executable: pip3
+    executable: "pip3"

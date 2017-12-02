@@ -1,5 +1,5 @@
 ---
-- name: Install curl
+- name: "Install curl"
   become: True
   apt:
-    name: curl
+    name: "curl"

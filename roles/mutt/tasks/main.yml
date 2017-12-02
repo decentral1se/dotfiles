@@ -1,44 +1,44 @@
 ---
-- name: Install mutt
+- name: "Install mutt"
   become: True
   apt:
-    name: mutt
+    name: "mutt"
 
-- name: Make sure the mutt configuration folder is created
+- name: "Make sure the mutt configuration folder is created"
   file:
     path: "{{ home }}/.mutt"
-    state: directory
-    mode: 0755
+    state: "directory"
+    mode: "0755"
     owner: "{{ ansible_user }}"
 
-- name: Symlink the mutt password file
+- name: "Symlink the mutt password file"
   file:
-    src: "{{ dotfiles }}/dotfiles/mutt/passwd.gpg"
+    src: "passwd.gpg"
     dest: "{{ home }}/.mutt/passwd.gpg"
-    state: link
+    state: "link"
     force: True
     owner: "{{ ansible_user }}"
 
-- name: Symlink the mutt configuration file
+- name: "Symlink the mutt configuration file"
   file:
-    src: "{{ dotfiles }}/dotfiles/mutt/muttrc"
+    src: "muttrc"
     dest: "{{ home }}/.mutt/muttrc"
-    state: link
+    state: "link"
     force: True
     owner: "{{ ansible_user }}"
 
-- name: Symlink the mutt main colors
+- name: "Symlink the mutt main colors"
   file:
-    src: "{{ dotfiles }}/dotfiles/mutt/colors"
+    src: "colors"
     dest: "{{ home }}/.mutt/colors"
-    state: link
+    state: "link"
     force: True
     owner: "{{ ansible_user }}"
 
-- name: Symlink the mutt GPG configuration
+- name: "Symlink the mutt GPG configuration"
   file:
-    src: "{{ dotfiles }}/dotfiles/gpg/gpg.rc"
+    src: "gpg.rc"
     dest: "{{ home }}/.mutt/gpg.rc"
-    state: link
+    state: "link"
     force: True
     owner: "{{ ansible_user }}"

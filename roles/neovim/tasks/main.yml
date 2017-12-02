@@ -1,43 +1,43 @@
 ---
-- name: Install neovim
+- name: "Install neovim"
   become: True
   apt:
-    name: neovim
+    name: "neovim"
 
-- name: Make sure the configuration folder is created
+- name: "Make sure the configuration folder is created"
   file:
     path: "{{ home }}/.config"
-    state: directory
-    mode: 0755
+    state: "directory"
+    mode: "0755"
     owner: "{{ ansible_user }}"
 
-- name: Make sure the neovim configuration folder is created
+- name: "Make sure the neovim configuration folder is created"
   file:
     path: "{{ home }}/.config/nvim"
-    state: directory
-    mode: 0755
+    state: "directory"
+    mode: "0755"
     owner: "{{ ansible_user }}"
 
-- name: Symlink neovim configuration
+- name: "Symlink neovim configuration"
   file:
-    src: "{{ dotfiles }}/dotfiles/nvim/init.vim"
+    src: "init.vim"
     dest: "{{ home }}/.config/nvim/init.vim"
-    state: link
+    state: "link"
     force: True
 
-- name: Make sure the neovim autoload folder is created
+- name: "Make sure the neovim autoload folder is created"
   file:
     path: "{{ home }}/.config/nvim/autoload"
-    state: directory
+    state: "directory"
     mode: 0755
     owner: "{{ ansible_user }}"
 
-- name: Install neovim plugin manager
+- name: "Install neovim plugin manager"
   get_url:
     url: "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
     dest: "{{ home }}/.config/nvim/autoload"
 
-- name: Install neovim python package
+- name: "Install neovim python package"
   pip:
     name: neovim
     extra_args: "--user"

@@ -1,33 +1,33 @@
 ---
-- name: Install docker dependencies
+- name: "Install docker dependencies"
   become: True
   apt:
     name: "{{ item }}"
   with_items:
-    - apt-transport-https
-    - dirmngr
+    - "apt-transport-https"
+    - "dirmngr"
 
-- name: Add docker repository list
+- name: "Add docker repository list"
   become: True
   lineinfile:
     dest: "/etc/apt/sources.list"
     line: "deb https://apt.dockerproject.org/repo debian-stretch main"
 
-- name: Add docker repository key
+- name: "Add docker repository key"
   become: True
   apt_key:
     keyserver: "hkp://p80.pool.sks-keyservers.net:80"
     id: "58118E89F3A912897C070ADBF76221572C52609D"
 
-- name: Install docker engine
+- name: "Install docker engine"
   become: True
   apt:
-    name: docker-engine
+    name: "docker-engine"
     update_cache: True
 
-- name: Add current user to the docker group
+- name: "Add current user to the docker group"
   become: True
   user:
     name: "{{ ansible_user }}"
-    group: docker
-    state: present
+    group: "docker"
+    state: "present"
