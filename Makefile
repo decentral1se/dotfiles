@@ -1,12 +1,14 @@
 IMAGE      := dotfiles
-WORKDIR    := /var/dotfiles
+WORKDIR    := /home/root/dotfiles
 
 build:
 	@docker build -t $(IMAGE) .
 .PHONY: build
 
 run:
-	@docker run -ti $(IMAGE) bash
+	@docker run \
+	-v $$(pwd):$(WORKDIR) \
+	-ti $(IMAGE) bash
 .PHONY: run
 
 test:
