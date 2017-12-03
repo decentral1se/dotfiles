@@ -1,0 +1,8 @@
+---
+- name: "Install python-jedi"
+  become: True
+  apt:
+    name: "{{ item }}"
+  with_items:
+    - "python-jedi"
+    - "python3-jedi"

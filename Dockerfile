@@ -28,6 +28,8 @@ RUN apt-get install -y \
   python3 \
   python-pip \
   python3-pip \
+  python-jedi \
+  python3-jedi \
   remind \
   shellcheck \
   tmux \

@@ -37,3 +37,4 @@
     - { role: ag }
     - { role: nvr }
     - { role: openvpn }
+    - { role: python-jedi }
