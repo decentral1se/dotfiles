@@ -9,19 +9,21 @@ My [Debian Stretch] system configuration files, managed with [Ansible].
 
 Mostly plundered on the high seas of the internet.
 
-Each commits is tested via Travis CI, so I can be sure that a new system
-will be configured correctly. It's setup quite modularly. If you
-understand the basics of Ansible, then it should be very easy to fork it
-and adapt as you need. All roles are called one by one from
-`bootstrap.yml`.
+# Fork It
 
-# Install
+Each commits is tested via Travis CI, so I can be sure that a new system will
+be configured correctly. It's setup quite modularly. If you understand the
+basics of Ansible, then it should be very easy to fork it and adapt as you
+need. All roles are called one by one from `bootstrap.yml`. I pre-install all
+the system dependencies in the `Dockerfile` to speed up the CI runs.
+
+# Run It
 
 From a fresh install of Debian Stretch, you can run:
 
 ```bash
 $ sudo apt-get install git ansible
-$ git clone <your-dotfiles-fork> 
-$ cd dotfiles 
+$ git clone <your-dotfiles-fork>
+$ cd dotfiles
 $ make bootstrap
 ```
