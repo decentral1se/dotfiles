@@ -20,6 +20,8 @@ and adapt as you need. All roles are called one by one from
 From a fresh install of Debian Stretch, you can run:
 
 ```bash
-$ sudo apt-get install ansible
+$ sudo apt-get install git ansible
+$ git clone <your-dotfiles-fork> 
+$ cd dotfiles 
 $ make bootstrap
 ```
