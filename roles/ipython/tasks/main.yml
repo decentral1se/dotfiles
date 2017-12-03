@@ -14,7 +14,7 @@
 
 - name: "Symlink the ipython configuration"
   file:
-    src: "profile_default"
+    src: "{{ roles }}/ipython/files/profile_default"
     dest: "{{ home }}/.ipython/profile_default"
     state: "link"
     force: True

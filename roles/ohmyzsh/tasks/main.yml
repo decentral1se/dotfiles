@@ -7,7 +7,7 @@
 
 - name: "Symlink the zsh configuration file"
   file:
-    src: "zshrc"
+    src: "{{ roles }}/ohmyzsh/files/zshrc"
     dest: "{{ home }}/.zshrc"
     state: "link"
     force: True
@@ -15,7 +15,7 @@
 
 - name: "Symlink the zsh aliases"
   file:
-    src: "zsha"
+    src: "{{ roles }}/ohmyzsh/files/zsha"
     dest: "{{ home }}/.zsha"
     state: "link"
     force: True
@@ -23,7 +23,7 @@
 
 - name: "Symlink the zsh functions"
   file:
-    src: "zshf"
+    src: "{{ roles }}/ohmyzsh/files/zshf"
     dest: "{{ home }}/.zshf"
     state: "link"
     force: True

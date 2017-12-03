@@ -6,7 +6,7 @@
 
 - name: "Symlink the Git configuration"
   file:
-    src: "gitconfig"
+    src: "{{ roles }}/git/files/gitconfig"
     dest: "{{ home }}/.gitconfig"
     state: "link"
     force: True
@@ -14,7 +14,7 @@
 
 - name: "Symlink the Git ignore configuration"
   file:
-    src: "gitignore_global"
+    src: "{{ roles }}/git/files/gitignore_global"
     dest: "{{ home }}/.gitignore_global"
     state: "link"
     force: True

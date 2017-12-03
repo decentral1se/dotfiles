@@ -1,7 +1,7 @@
 ---
 - name: "Symlink GHC configuration"
   file:
-    src: "ghci"
+    src: "{{ roles }}/ghc/files/ghci"
     dest: "{{ home }}/.ghci"
     state: "link"
     force: True

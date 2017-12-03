@@ -1,2 +1,3 @@
 ---
 home: "/home/{{ ansible_user }}"
+roles: "{{ home }}/dotfiles/roles/"

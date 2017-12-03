@@ -1,7 +1,7 @@
 ---
 - name: "Symlink the mailcap configuration"
   file:
-    src: "mailcap"
+    src: "{{ roles }}/mailcap/files/mailcap"
     dest: "{{ home }}/.mailcap"
     state: "link"
     force: True

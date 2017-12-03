@@ -1,19 +1,19 @@
 ---
-- name: Clone the nvm repository
+- name: "Clone the nvm repository"
   git:
     repo: "https://github.com/creationix/nvm.git"
     dest: "{{ home }}/.nvm"
     update: False
 
-- name: Checkout the latest nvm release tag
+- name: "Checkout the latest nvm release tag"
   command: "git checkout v0.33.6"
   args:
     chdir: "{{ home }}/.nvm"
 
-- name: Symlink the nvm configuration
+- name: "Symlink the nvm configuration"
   file:
-    src: "nvmrc"
+    src: "{{ roles }}/nvm/files/nvmrc"
     dest: "{{ home }}/.nvmrc"
-    state: link
+    state: "link"
     force: True
     owner: "{{ ansible_user }}"

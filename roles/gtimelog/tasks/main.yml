@@ -13,7 +13,7 @@
 
 - name: "Symlink the gtimelog configuration"
   file:
-    src: "gtimelogrc"
+    src: "{{ roles }}/gtimelog/files/gtimelogrc"
     dest: "{{ home }}/.gtimelog/gtimelogrc"
     state: "link"
     force: True

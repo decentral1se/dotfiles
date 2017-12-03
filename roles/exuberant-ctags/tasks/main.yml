@@ -6,7 +6,7 @@
 
 - name: "Symlink exuberant-ctags configuration"
   file:
-    src: "ctags"
+    src: "{{ roles }}/exuberant-ctags/files/ctags"
     dest: "{{ home }}/.ctags"
     state: "link"
     force: True

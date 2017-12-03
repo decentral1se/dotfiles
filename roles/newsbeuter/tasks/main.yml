@@ -13,7 +13,7 @@
 
 - name: "Symlink the newsbeuter configuration"
   file:
-    src: "config"
+    src: "{{ roles }}/newsbeuter/files/config"
     dest: "{{ home }}/.newsbeuter/config"
     state: "link"
     force: True
@@ -21,7 +21,7 @@
 
 - name: "Symlink the newsbeuter URLs"
   file:
-    src: "urls"
+    src: "{{ roles }}/newsbeuter/files/urls"
     dest: "{{ home }}/.newsbeuter/urls"
     state: "link"
     force: True

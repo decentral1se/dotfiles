@@ -20,7 +20,7 @@
 
 - name: "Symlink neovim configuration"
   file:
-    src: "init.vim"
+    src: "{{ roles }}/neovim/files/init.vim"
     dest: "{{ home }}/.config/nvim/init.vim"
     state: "link"
     force: True
@@ -39,6 +39,6 @@
 
 - name: "Install neovim python package"
   pip:
-    name: neovim
+    name: "neovim"
     extra_args: "--user"
-    executable: pip3
+    executable: "pip3"

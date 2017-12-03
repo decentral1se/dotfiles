@@ -6,7 +6,7 @@
 
 - name: "Symlink the tmux configuration"
   file:
-    src: "tmux.conf"
+    src: "{{ roles }}/tmux/files/tmux.conf"
     dest: "{{ home }}/.tmux.conf"
     state: "link"
     force: True

@@ -7,7 +7,7 @@
 
 - name: "Symlink the vint configuration"
   file:
-    src: "vintrc.yaml"
+    src: "{{ roles }}/vint/files/vintrc.yaml"
     dest: "{{ home }}/.vintrc.yaml"
     state: "link"
     force: True

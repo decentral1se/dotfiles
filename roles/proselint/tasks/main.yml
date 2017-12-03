@@ -1,7 +1,7 @@
 ---
 - name: "Symlink the proselint configuration"
   file:
-    src: "proselintrc"
+    src: "{{ roles }}/proselint/files/proselintrc"
     dest: "{{ home }}/.proselintrc"
     state: "link"
     force: True
