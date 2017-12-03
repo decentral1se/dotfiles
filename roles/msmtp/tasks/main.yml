@@ -6,7 +6,7 @@
 
 - name: "Symlink the msmtp configuration"
   file:
-    src: "msmtprc"
+    src: "{{ roles }}/msmtp/files/msmtprc"
     dest: "{{ home }}/.msmtprc"
     state: "link"
     force: True

@@ -13,7 +13,7 @@
 
 - name: "Symlink the mutt password file"
   file:
-    src: "passwd.gpg"
+    src: "{{ roles }}/mutt/files/passwd.gpg"
     dest: "{{ home }}/.mutt/passwd.gpg"
     state: "link"
     force: True
@@ -21,7 +21,7 @@
 
 - name: "Symlink the mutt configuration file"
   file:
-    src: "muttrc"
+    src: "{{ roles }}/mutt/files/pmuttrc"
     dest: "{{ home }}/.mutt/muttrc"
     state: "link"
     force: True
@@ -29,7 +29,7 @@
 
 - name: "Symlink the mutt main colors"
   file:
-    src: "colors"
+    src: "{{ roles }}/mutt/files/pcolors"
     dest: "{{ home }}/.mutt/colors"
     state: "link"
     force: True
@@ -37,7 +37,7 @@
 
 - name: "Symlink the mutt GPG configuration"
   file:
-    src: "gpg.rc"
+    src: "{{ roles }}/mutt/files/pgpg.rc"
     dest: "{{ home }}/.mutt/gpg.rc"
     state: "link"
     force: True
