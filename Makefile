@@ -19,5 +19,5 @@ test:
 .PHONY: test
 
 bootstrap:
-	@ansible-playbook bootstrap.yml
+	@ansible-playbook bootstrap.yml --ask-become-pass
 .PHONY: bootstrap
