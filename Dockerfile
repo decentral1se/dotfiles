@@ -23,6 +23,7 @@ RUN apt-get install -y \
   libgmp-dev \
   neovim \
   newsbeuter \
+  openvpn \
   pass \
   python3 \
   python-pip \

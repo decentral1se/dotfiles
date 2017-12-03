@@ -36,3 +36,4 @@
     - { role: autoenv }
     - { role: ag }
     - { role: nvr }
+    - { role: openvpn }
