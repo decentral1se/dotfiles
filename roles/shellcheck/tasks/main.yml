@@ -1,0 +1,4 @@
+---
+- name: "Install shellcheck"
+  apt:
+    name: "shellcheck"

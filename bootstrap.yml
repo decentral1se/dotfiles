@@ -17,6 +17,7 @@
     - { role: newsbeuter }
     - { role: stack }
     - { role: ghc }
+    - { role: shellcheck }
     - { role: gtimelog }
     - { role: python }
     - { role: pip }

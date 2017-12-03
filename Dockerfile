@@ -28,6 +28,7 @@ RUN apt-get install -y \
   python-pip \
   python3-pip \
   remind \
+  shellcheck \
   tmux \
   wget \
   xz-utils \
