@@ -236,3 +236,10 @@ alias gpg='gpg2'
 
 # dpkg
 whicharch='dpkg --print-architecture'
+
+# darcs
+alias dwn='darcs whatsnew'
+alias drc='darcs record'
+
+alias runghc='$(stack exec -- which runghc)'
+alias ghc='$(stack exec -- which ghc)'
