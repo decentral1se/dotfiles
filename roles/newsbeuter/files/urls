@@ -29,9 +29,9 @@ http://www.rabble.ie/feed/ "~The Rabble" Ireland
 https://www.dublininquirer.com/feed/ "~Dublin Inquirer" Ireland
 
 # Stackage Maintenance
-http://packdeps.haskellers.com/feed/packunused "~Stackage: packunused"
-http://packdeps.haskellers.com/feed/tasty-discover "~Stackage: tasty-discover"
-http://packdeps.haskellers.com/feed/lentil "~Stackage: lentil"
+http://packdeps.haskellers.com/feed/packunused "~packunused" "Stackage"
+http://packdeps.haskellers.com/feed/tasty-discover "~tasty-discover" "Stackage"
+http://packdeps.haskellers.com/feed/lentil "~lentil" "Stackage"
 
 # Haskell
 http://feeds.feedburner.com/ChurningAndChurning "~23Skidoo Blog" Haskell
