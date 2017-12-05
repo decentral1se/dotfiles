@@ -45,6 +45,7 @@ Plug 'tacahiroy/ctrlp-funky'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'mklabs/split-term.vim'
+Plug 'romgrk/winteract.vim'
 
 " Linting
 Plug 'neomake/neomake'
@@ -231,6 +232,8 @@ if exists(':tnoremap')
   tnoremap <C-j> <C-\><C-n><C-w>j
   tnoremap <C-k> <C-\><C-n><C-w>k
 endif
+
+nmap <leader>w :InteractiveWindow<CR>
 
 syntax on
 filetype plugin indent on
