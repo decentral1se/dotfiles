@@ -12,3 +12,5 @@
     src: "fetchmailrc.j2"
     dest: "{{ home }}/.fetchmailrc"
     force: True
+  tags:
+    - "uses-pass"
