@@ -1,0 +1,2 @@
+poll mail.riseup.net protocol pop3 user "{{ mail_user }}" pass "{{ mail_pass }}" ssl
+mda "/usr/bin/procmail -d %T"

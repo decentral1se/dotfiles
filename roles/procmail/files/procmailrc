@@ -1,0 +1,9 @@
+MAILDIR=$HOME/mail
+
+:0
+* ^From.*root@lostatsea
+* ^Subject:.*Cron
+/dev/null
+
+:0:
+$MAILDIR/inbox

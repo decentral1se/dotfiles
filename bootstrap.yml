@@ -38,3 +38,5 @@
     - { role: nvr }
     - { role: openvpn }
     - { role: python-jedi }
+    - { role: fetchmail }
+    - { role: procmail }

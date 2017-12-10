@@ -15,7 +15,7 @@ test:
 	@docker run \
 	-v $$(pwd):$(WORKDIR) \
 	-ti $(IMAGE) \
-	ansible-playbook bootstrap.yml
+	ansible-playbook --skip-tags "uses-pass" bootstrap.yml
 .PHONY: test
 
 bootstrap:

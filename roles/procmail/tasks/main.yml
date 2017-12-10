@@ -1,0 +1,21 @@
+---
+- name: "Install procmail"
+  become: True
+  apt:
+    name: "procmail"
+
+- name: "Symlink the procmail forwarding configuration"
+  file:
+    src: "{{ roles }}/procmail/files/forward"
+    dest: "{{ home }}/.forward"
+    state: "link"
+    force: True
+    owner: "{{ ansible_user }}"
+
+- name: "Symlink the procmail configuration"
+  file:
+    src: "{{ roles }}/procmail/files/procmailrc"
+    dest: "{{ home }}/.procmailrc"
+    state: "link"
+    force: True
+    owner: "{{ ansible_user }}"

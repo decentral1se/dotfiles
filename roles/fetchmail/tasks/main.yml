@@ -1,0 +1,14 @@
+---
+- name: "Install fetchmail"
+  become: True
+  apt:
+    name: "fetchmail"
+
+- name: "Copy the fetchmail configuration"
+  vars:
+    - mail_user: "{{ lookup('passwordstore', 'riseup/email')}}"
+    - mail_pass: "{{ lookup('passwordstore', 'riseup/password')}}"
+  template:
+    src: "fetchmailrc.j2"
+    dest: "{{ home }}/.fetchmailrc"
+    force: True
