@@ -77,8 +77,6 @@ Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
 
-call neomake#configure#automake('nrw', 350)
-
 set background=dark
 colorscheme gruvbox
 
@@ -108,7 +106,7 @@ let g:ctrlp_extensions=['funky', 'tag']
 let g:deoplete#enable_at_startup=1
 let g:deoplete#enable_ignore_case=1
 let g:deoplete#enable_smart_case=1
-let g:neomake_verbose=3
+let g:neomake_verbose=1
 let g:neomake_logfile='/tmp/neomake.log'
 let g:neomake_python_enabled_makers=['pylama', 'vulture']
 let g:neomake_zsh_enabled_makers=['shellcheck']
@@ -337,3 +335,5 @@ command! Gs  :Gstatus
 command! Gp  :Git push origin master
 command! Gb  :Git checkout -b
 command! Go  :Git checkout .
+
+call neomake#configure#automake('nw', 750)
