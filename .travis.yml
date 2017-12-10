@@ -8,3 +8,6 @@ services:
 script:
   - make build
   - make test
+
+notifications:
+  email: false
